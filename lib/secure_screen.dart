@@ -21,7 +21,7 @@ class SecureScreen {
 
     if (Platform.isAndroid) {
       bSecured =
-          await (_channel.invokeMethod('secureScreen', {"secure": secure}) as FutureOr<bool>);
+          await (_channel.invokeMethod('secureScreen', {"secure": secure}));
       return bSecured;
     } else if (Platform.isIOS) {
       if (secure) {
